@@ -1,0 +1,93 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['usuario'])){
+        echo '
+            <script>
+            alert("Debes de Iniciar Sesion");
+            window.location = "../index.php";
+            </script>
+        ';
+        session_destroy();
+        die();
+    }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="../assents/css/main.css">
+    <link rel="icon" type="png" href="../assents/imagenes/rubygod.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../php/mayena.php"><img class="logo" src="../assents/imagenes/rubygod.png" alt="logo"></a>
+
+            <ul class="enlaces-menu">
+                <li class="dropdown">
+                    <a href="#">Ruby's restaurant</a>
+                <ul class="submenu">
+                    <li><a href="../php/mayena.php">Historia</a<li>
+                    <li><a href="../php/mayena.php">Nosotros</a<li>
+                    <li><a href="../php/mayena.php">Vision</a>   
+                    
+
+                </ul>
+                <li class="dropdown">
+                    <a href="../php/mayena.php">Multimedia</a>
+                <ul class="submenu">
+                   <li><a href="../php/mayena.php">Instalaciones</a></li>
+                   <li><a href="../php/mayena.php">Recetas</a>
+                </ul>
+                <li class="dropdown">
+                    <a href="../php/mayena.php">Menu</a>
+                <ul class="submenu">
+                   <li><a href="../php/mayena.php">Helados</a>
+                   <li><a href="../php/mayena.php">Pizzas</a>
+                   <li><a href="../php/mayena.php">Sopas</a>
+                   <li><a href="../php/mayena.php">Carnes</a>
+                   <li><a href="../php/mayena.php">Almuerzos</a>
+                   <li><a href="../php/mayena.php">Ensaladas</a>
+                </ul>
+                <li class="dropdown">
+                    <a href="../php/mayena.php">Pedidos</a>
+                <ul class="submenu">
+                   <li><a href="../php/mayena.php">Solicitud</a></li>
+                   <li><a href="../php/mayena.php">Delivery</a>
+                </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Contactenos</a>
+                <ul class="submenu">
+                    <li><a href="../php/mayena.php">Twitter</a> 
+                    <li><a href="../php/mayena.php">Facebook</a>
+                    <li><a href="../php/mayena.php">Correo Electronico</a>
+                    <li><a href="../php/mayena.php">Instagram</a>
+                </ul>
+                </li> 
+				 <li><a href="../php/cerrar_sesion.php">Salir</a></li>
+               
+            </ul>   
+
+            <button class="ham" type="button">   
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+            </button>                       
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p>Ruby>>>>Todo mlbb</p>
+        </section>
+
+    <script src="../assents/js/main.js"></script>
+</body>
+</html>
